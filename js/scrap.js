@@ -9,7 +9,7 @@ const fs = require('fs');
   const page = await browser.newPage();
   let allResults = {};
 
-  for (let i = startPage; i <=endPage; i++) {
+  for (let i = startPage; i <= endPage; i++) {
     const url = `${baseUrl}${i}`;
     await page.goto(url);
     await page.waitForSelector('li[data-nsuid');
