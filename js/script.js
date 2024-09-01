@@ -1,7 +1,13 @@
 
 
-fetch('https://api.ec.nintendo.com/v1/price?country=FR&lang=fr&ids=70010000057981')
-.then( response => response.json())
+fetch('https://api.ec.nintendo.com/v1/price?country=FR&lang=fr&ids=70010000057981', {
+  method: 'get',
+  mode: 'cross-origin',
+  headers: {
+    'Access-Control-Allow-Origin': '*'
+  }
+})
+.then( response => response.text())
 .then( data => console.log(data));
 
 (async () => {
@@ -9,4 +15,3 @@ fetch('https://api.ec.nintendo.com/v1/price?country=FR&lang=fr&ids=7001000005798
   const data = await response.text();
   console.log(data);
   })();
-
