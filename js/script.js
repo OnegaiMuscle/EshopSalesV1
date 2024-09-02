@@ -15,3 +15,6 @@ fetch('https://api.ec.nintendo.com/v1/price?country=FR&lang=fr&ids=7001000005798
   const data = await response.text();
   console.log(data);
   })();
+
+
+// cors restriction
